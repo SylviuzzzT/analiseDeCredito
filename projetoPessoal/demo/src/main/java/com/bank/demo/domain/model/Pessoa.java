@@ -10,7 +10,6 @@ public class Pessoa {
     private int idade;
     private Renda renda;
     private HistoricoFinanceiro historico;
-    int score = 500;
 
     public Pessoa(String nome, CPF cpf, int idade, Renda renda, HistoricoFinanceiro historico) {
 
@@ -21,39 +20,7 @@ public class Pessoa {
         this.historico = historico;
 
     }
-    public int calculaScore(){
 
-        score += calculaScorePorIdade();
-        score += calculaScorePorRenda();
-        score += calculaScorePorDivida();
-
-        return score;
-    }
-
-    public int calculaScorePorIdade(){
-        if(idade > 24 && idade < 60)return 50;
-        if (idade < 25) return -25;
-
-        return 0;
-    }
-
-    public int calculaScorePorRenda(){
-        if (renda.getValor() >= 5000) return 50;
-
-        if(renda.getValor() > 2000) return 25;
-
-        return -50;
-    }
-
-    public int calculaScorePorDivida(){
-        int qntDividas = historico.getDividas().size();
-
-        if (qntDividas == 0) return 100;
-        if(qntDividas < 2) return -25;
-
-        return -50;
-
-    }
 
     public String getNome() {
         return nome;

@@ -2,22 +2,22 @@ package com.bank.demo.domain.model;
 
 public class Renda {
 
-    private String modalidade;
+    private ModalidadeRenda modalidade;
     private double valor;
     private boolean recorrente;
 
 
-    public Renda(String modalidade, double valor, boolean recorrente) {
+    public Renda(ModalidadeRenda modalidade, double valor, boolean recorrente) {
         this.modalidade = modalidade;
         this.valor = valor;
         this.recorrente = recorrente;
     }
 
-    public String getModalidade() {
+    public ModalidadeRenda getModalidade() {
         return modalidade;
     }
 
-    public void setModalidade(String modalidade) {
+    public void setModalidade(ModalidadeRenda modalidade) {
         this.modalidade = modalidade;
     }
 

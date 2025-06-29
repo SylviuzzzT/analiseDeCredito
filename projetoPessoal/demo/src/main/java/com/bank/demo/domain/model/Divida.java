@@ -1,15 +1,17 @@
 package com.bank.demo.domain.model;
 
+import org.springframework.cglib.core.Local;
+
 import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Divida {
     private double valor;
     private String credor;
-    private Date vencimento;
+    private LocalDateTime vencimento;
     private boolean paga;
 
-    public Divida(double valor, String credor, Date vencimento, boolean paga) {
+    public Divida(double valor, String credor, LocalDateTime vencimento, boolean paga) {
         this.valor = valor;
         this.credor = credor;
         this.vencimento = vencimento;
@@ -32,11 +34,11 @@ public class Divida {
         this.credor = credor;
     }
 
-    public Date getVencimento() {
+    public LocalDateTime getVencimento() {
         return vencimento;
     }
 
-    public void setVencimento(Date vencimento) {
+    public void setVencimento(LocalDateTime vencimento) {
         this.vencimento = vencimento;
     }
 

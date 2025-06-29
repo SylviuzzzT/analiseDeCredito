@@ -1,5 +1,7 @@
 package com.bank.demo.domain.model;
 
+import com.bank.demo.infrastructure.persistence.DividaEntity;
+
 import java.util.List;
 
 public class HistoricoFinanceiro {

@@ -6,7 +6,7 @@ public class CalculoScore {
 
     private Pessoa pessoa;
 
-    public int calcular(Pessoa pessoa) {
+    public static int calcular(Pessoa pessoa) {
         int score = 500;
 
         score += calculaScorePorIdade(pessoa.getIdade());
@@ -17,14 +17,14 @@ public class CalculoScore {
         return score;
     }
 
-    public int calculaScorePorIdade(int idade) {
+    public static int calculaScorePorIdade(int idade) {
         if(idade > 24 && idade < 60)return 50;
         if (idade < 25) return -25;
 
         return 0;
     }
 
-    public int calculaScorePorRenda(double valorRenda){
+    public static int calculaScorePorRenda(double valorRenda){
         if (valorRenda >= 5000) return 50;
 
         if(valorRenda > 2000) return 25;
@@ -32,7 +32,7 @@ public class CalculoScore {
         return -50;
     }
 
-    public int calculaScorePorDivida(int quantidadeDividas) {
+    public static int calculaScorePorDivida(int quantidadeDividas) {
 
         if (quantidadeDividas == 0) return 100;
         if(quantidadeDividas < 2) return -25;
@@ -41,7 +41,7 @@ public class CalculoScore {
 
     }
 
-    public int calculaScorePorComprometimento(List<Divida> dividas, double renda) {
+    public static int calculaScorePorComprometimento(List<Divida> dividas, double renda) {
         double totalDividas = 0;
         double comprometimento = 0;
 

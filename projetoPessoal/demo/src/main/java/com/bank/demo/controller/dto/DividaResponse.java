@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @AllArgsConstructor
@@ -14,7 +15,7 @@ import java.time.LocalDateTime;
 public class DividaResponse {
     private String credor;
     private double valor;
-    private LocalDateTime vencimento;
+    private LocalDate vencimento;
     private boolean paga;
 
 }

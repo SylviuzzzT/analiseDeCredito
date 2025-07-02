@@ -2,9 +2,8 @@ package com.bank.demo.domain.model;
 
 import java.util.List;
 
-public class CalculoScore {
+public class ScoreCalculator {
 
-    private Pessoa pessoa;
 
     public static int calcular(Pessoa pessoa) {
         int score = 500;

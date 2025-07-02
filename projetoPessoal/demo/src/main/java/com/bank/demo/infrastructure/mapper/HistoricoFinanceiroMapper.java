@@ -28,7 +28,7 @@ public class HistoricoFinanceiroMapper {
         HistoricoFinanceiroEntity historicoFinanceiroEntity = new HistoricoFinanceiroEntity();
 
         historicoFinanceiroEntity.setEmprestimosQuitados(historicoFinanceiro.getEmprestimosQuitados());
-        historicoFinanceiroEntity.setNomeSujo(historicoFinanceiro.isTemNomeSujo());
+        historicoFinanceiroEntity.setNomeSujo(historicoFinanceiro.isNomeNegativado());
 
         List<DividaEntity> dividas = new ArrayList<>();
         for(Divida divida : historicoFinanceiro.getDividas()){

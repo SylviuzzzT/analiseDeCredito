@@ -5,13 +5,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "divida")
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 public class DividaEntity {
 
     @Id
@@ -22,7 +23,7 @@ public class DividaEntity {
 
     private String credor;
 
-    private LocalDateTime vencimento;
+    private LocalDate vencimento;
 
     private boolean quitada;
 

@@ -6,6 +6,7 @@ import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @AllArgsConstructor
@@ -20,7 +21,7 @@ public class DividaRequest {
     private String credor;
 
     @NotNull(message = "vencimento é obrigatório")
-    private LocalDateTime vencimento;
+    private LocalDate vencimento;
 
     private Boolean paga;
 
@@ -40,11 +41,11 @@ public class DividaRequest {
         this.credor = credor;
     }
 
-    public LocalDateTime getVencimento() {
+    public LocalDate getVencimento() {
         return vencimento;
     }
 
-    public void setVencimento(LocalDateTime vencimento) {
+    public void setVencimento(LocalDate vencimento) {
         this.vencimento = vencimento;
     }
 

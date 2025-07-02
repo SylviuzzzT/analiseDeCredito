@@ -10,5 +10,5 @@ import java.util.List;
 public interface DividaRepository extends JpaRepository<DividaEntity, Integer> {
     List<DividaEntity> findByHistoricoId(Long historicoId);
 
-    List<DividaEntity> findByQuitadaId(boolean quitada);
+    List<DividaEntity> findByQuitada(boolean quitada);
 }

@@ -2,7 +2,7 @@ package com.bank.demo.infrastructure.mapper;
 
 import com.bank.demo.controller.dto.DividaResponse;
 import com.bank.demo.controller.dto.PessoaResponse;
-import com.bank.demo.domain.model.CalculoScore;
+import com.bank.demo.domain.model.ScoreCalculator;
 import com.bank.demo.domain.model.Divida;
 import com.bank.demo.domain.model.Pessoa;
 
@@ -22,9 +22,9 @@ public class PessoaResponseMapper {
         response.setRendaRecorrente(pessoa.getRenda().isRecorrente());
 
         response.setEmprestimosQuitados(pessoa.getHistorico().getEmprestimosQuitados());
-        response.setNomeSujo(pessoa.getHistorico().isTemNomeSujo());
+        response.setNomeSujo(pessoa.getHistorico().isNomeNegativado());
 
-        response.setScore(CalculoScore.calcular(pessoa));
+        response.setScore(ScoreCalculator.calcular(pessoa));
 
         List<DividaResponse> dividas = new ArrayList<>();
         for(Divida divida : pessoa.getHistorico().getDividas()){

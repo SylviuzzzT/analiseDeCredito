@@ -1,19 +1,17 @@
 package com.bank.demo.domain.model;
 
-import com.bank.demo.infrastructure.persistence.DividaEntity;
-
 import java.util.List;
 
 public class HistoricoFinanceiro {
 
     private List<Divida> dividas;
     private int emprestimosQuitados;
-    private boolean temNomeSujo;
+    private boolean nomeNegativado;
 
-    public HistoricoFinanceiro(List<Divida> dividas, int emprestimosQuitados, boolean temNomeSujo) {
+    public HistoricoFinanceiro(List<Divida> dividas, int emprestimosQuitados, boolean nomeNegativado) {
         this.dividas = dividas;
         this.emprestimosQuitados = emprestimosQuitados;
-        this.temNomeSujo = temNomeSujo;
+        this.nomeNegativado = nomeNegativado;
     }
 
     public List<Divida> getDividas() {
@@ -32,12 +30,12 @@ public class HistoricoFinanceiro {
         this.emprestimosQuitados = emprestimosQuitados;
     }
 
-    public boolean isTemNomeSujo() {
-        return temNomeSujo;
+    public boolean isNomeNegativado() {
+        return nomeNegativado;
     }
 
-    public void setTemNomeSujo(boolean temNomeSujo) {
-        this.temNomeSujo = temNomeSujo;
+    public void setNomeNegativado(boolean nomeNegativado) {
+        this.nomeNegativado = nomeNegativado;
     }
 
     @Override
@@ -45,7 +43,7 @@ public class HistoricoFinanceiro {
         return "HistoricoFinanceiro{" +
                 "dividas=" + dividas +
                 ", emprestimosQuitados=" + emprestimosQuitados +
-                ", temNomeSujo=" + temNomeSujo +
+                ", temNomeSujo=" + nomeNegativado +
                 '}';
     }
 }
